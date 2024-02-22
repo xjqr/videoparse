@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html lang="en" style="height: 100%; margin: 0; padding: 0;">  
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频解析</title> 
+    <script src="https://unpkg.com/vue@3.4.19/dist/vue.global.js"></script> 
+    <style>  
+      #app {  
+        width: 100vw; /* 视口宽度 */  
+        height: 100vh; /* 视口高度 */  
+        overflow: hidden; /* 防止内容溢出 */  
+        position: fixed; /* 固定定位，确保覆盖整个页面 */  
+        top: 0;  
+        left: 0;  
+        z-index: 9999; /* 确保在最上层 */  
+      }  
+        
+      iframe {  
+        width: 100%; /* 占据父容器全部宽度 */  
+        height: 100%; /* 占据父容器全部高度 */  
+        border: none; /* 移除边框 */  
+      }    
+    </style>  
+</head>  
+<body> 
+  <div id="app">
+    <player :url="url"></player> 
+  </div>
+   
+</body>  
+<script src="./youkuplayerrender.js"></script>
+</html>
